@@ -54,7 +54,7 @@ export const Header = () => {
             <a href="#prize" className="text-green-300 hover:text-green-100 font-mono">Prize</a>
             <a href="#" className="text-green-300 hover:text-green-100 font-mono">Domain</a>
             <a href="#instructions" className="text-green-300 hover:text-green-100 font-mono">Instructions</a>
-            <a href="/contact" className="text-green-300 hover:text-green-100 font-mono">Contact</a>
+            <Link to="/contact" className="text-green-300 hover:text-green-100 font-mono">Contact</Link>
             <a href="/masterminds" className="text-green-300 hover:text-green-100 font-mono">Masterminds</a>
           </div>
           <button
@@ -77,7 +77,7 @@ export const Header = () => {
             <a href="#prize" className="text-green-300 hover:text-green-100 font-mono text-lg">Prize</a>
             <a href="#" className="text-green-300 hover:text-green-100 font-mono text-lg">Domain</a>
             <a href="#instructions" className="text-green-300 hover:text-green-100 font-mono text-lg">Instructions</a>
-            <a href="/contact" className="text-green-300 hover:text-green-100 font-mono text-lg">Contact</a>
+            <Link to="/contact" className="text-green-300 hover:text-green-100 font-mono">Contact</Link>
             <a href="/masterminds" className="text-green-300 hover:text-green-100 font-mono text-lg">Masterminds</a>
           </div>
         )}
