@@ -1,5 +1,6 @@
 import { useGLTF } from "@react-three/drei";
 import { useState, useEffect } from "react";
+import RazorpayButton from "../components/RazorpayButton";
 
 function RetroPC() {
   const { scene } = useGLTF("/models/retro_pc.glb");
@@ -106,9 +107,12 @@ export const Header = () => {
             </div>
           </div>
           <div className="flex justify-center mt-14">
-            <button className="cursor-pointer hover:cursor-pointer text-3xl px-6 py-3 bg-black border-2 border-green-400 text-green-400 font-mono rounded-md hover:bg-green-400 hover:text-black hover:shadow-[0_0_15px_#00ff00] transition-all duration-300">
+            {/* <button className="cursor-pointer hover:cursor-pointer text-3xl px-6 py-3 bg-black border-2 border-green-400 text-green-400 font-mono rounded-md hover:bg-green-400 hover:text-black hover:shadow-[0_0_15px_#00ff00] transition-all duration-300">
               Register Now
-            </button>
+            </button> */}
+            <div className="inline-block w-auto">
+              <RazorpayButton />
+            </div>
           </div>
         </div>
       </div>
