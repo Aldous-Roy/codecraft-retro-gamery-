@@ -4,7 +4,7 @@ body {
   background: black;
   color: #33ff33;
   font-family: 'VT323', monospace;
-  text-shadow: 0 0 5px #00ff00, 0 0 20px #00ff00;
+  text-shadow: 0 0 2px #00ff00, 0 0 10px #00ff00;
   cursor: url('/public/neoCursor.cur'), auto;
 }
 

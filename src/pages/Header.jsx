@@ -39,8 +39,8 @@ export const Header = () => {
   return (
     <div className="relative overflow-hidden w-full h-screen bg-black">
       <video
-        className="absolute w-full h-full object-cover"
-        src="/header.mp4"
+        className="absolute w-full h-full object-cover blur-xs"
+        src="/0901.mp4"
         autoPlay
         loop
         muted
@@ -50,11 +50,12 @@ export const Header = () => {
         <div className="fixed top-0 left-0 w-full flex items-center justify-between px-6 py-4 bg-black/40 backdrop-blur-md border-b-2 border-green-400 z-500">
           <span className="text-green-400 font-mono text-2xl drop-shadow-[0_0_6px_#00ff00]">⚡ CodeCraft</span>
           <div className="hidden md:flex gap-6">
-            <a href="#" className="text-green-300 hover:text-green-100 font-mono">Home</a>
+            <a href="/" className="text-green-300 hover:text-green-100 font-mono">Home</a>
             <a href="#prize" className="text-green-300 hover:text-green-100 font-mono">Prize</a>
             <a href="#" className="text-green-300 hover:text-green-100 font-mono">Domain</a>
             <a href="#instructions" className="text-green-300 hover:text-green-100 font-mono">Instructions</a>
-            <a href="#" className="text-green-300 hover:text-green-100 font-mono">Contact</a>
+            <a href="/contact" className="text-green-300 hover:text-green-100 font-mono">Contact</a>
+            <a href="/masterminds" className="text-green-300 hover:text-green-100 font-mono">Masterminds</a>
           </div>
           <button
             className="md:hidden text-green-300 hover:text-green-100 focus:outline-none"
@@ -72,11 +73,12 @@ export const Header = () => {
         </div>
         {menuOpen && (
           <div className="fixed top-[64px] left-0 w-full bg-black/90 border-b-2 border-green-400 flex flex-col items-center gap-4 py-4 z-40">
-            <a href="#" className="text-green-300 hover:text-green-100 font-mono text-lg">Home</a>
+            <a href="/" className="text-green-300 hover:text-green-100 font-mono text-lg">Home</a>
             <a href="#prize" className="text-green-300 hover:text-green-100 font-mono text-lg">Prize</a>
             <a href="#" className="text-green-300 hover:text-green-100 font-mono text-lg">Domain</a>
             <a href="#instructions" className="text-green-300 hover:text-green-100 font-mono text-lg">Instructions</a>
-            <a href="#" className="text-green-300 hover:text-green-100 font-mono text-lg">Contact</a>
+            <a href="/contact" className="text-green-300 hover:text-green-100 font-mono text-lg">Contact</a>
+            <a href="/masterminds" className="text-green-300 hover:text-green-100 font-mono text-lg">Masterminds</a>
           </div>
         )}
         <div className="h-screen inset-0 flex flex-col items-center justify-center text-center px-2">
@@ -84,7 +86,7 @@ export const Header = () => {
             CodeCraft 25<span className="animate-pulse">█</span>
           </h1>
           <p className="mt-4 text-base sm:text-lg lg:text-xl text-green-300 opacity-80">
-            Rewinding the future with retro vibes ⚡
+            Rewinding the future with retro vibes
           </p>
           <div className="mt-8">
             <div className="mt-6 flex gap-4 sm:gap-6 lg:gap-8 justify-center flex-wrap">

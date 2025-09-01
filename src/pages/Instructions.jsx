@@ -3,34 +3,34 @@ import testImage from "../../public/vite.svg";
 
 const instructionsData = [
   {
-    title: "Event Info",
+    title: "Team & Participation",
     content:
-      "The event will take place on June 22nd, 2024, from 10:00 AM to 6:00 PM at the Main Auditorium. Please arrive 15 minutes early for registration and setup.",
-    icon: "💡",
+      "Teams of 3–5 members (no solo entries).\nAll participants must stay on-site for the full 24 hours.",
+    icon: "👥",
     tip: "Pro tip: Bring your ID for quick check-in!",
     image: testImage,
   },
   {
-    title: "Bring All Peripherals",
+    title: "Logistics",
     content:
-      "Remember to bring your own laptop, charger, mouse, headphones, and any other peripherals you need. Power outlets will be available, but extension cords are limited.",
-    icon: "🖥️",
+      "Report 30 minutes early and follow the event schedule.\nCollege buses available; hostel accommodation for long-distance participants.",
+    icon: "🚌",
     tip: "Extra tip: Label your cables to avoid mix-ups!",
     image: testImage,
   },
   {
-    title: "On Spot Domain",
+    title: "Equipment & Development",
     content:
-      "The problem domain will be revealed at the start of the event. Teams are expected to brainstorm and build their solution within the allotted time.",
-    icon: "📝",
-    tip: "Hint: Collaboration is key to success!",
+      "Bring your own laptops and Ethernet cables.\nAll project work must be done during the hackathon.\nOnly small boilerplate code is allowed if declared in README.",
+    icon: "💻",
+    tip: "Hint: Test your setup before the event!",
     image: testImage,
   },
   {
-    title: "Food and Refreshment",
+    title: "Facilities & Conduct",
     content:
-      "Lunch and refreshments will be provided to all participants. Please inform us of any dietary restrictions at the registration desk.",
-    icon: "🍔",
+      "Meals provided: Lunch & Dinner (Day 1), Breakfast (Day 2).\nMaintain respectful behavior — unsafe or illegal activity leads to removal.",
+    icon: "🍴",
     tip: "Fun fact: We have vegan options too!",
     image: testImage,
   },
@@ -137,17 +137,7 @@ const Instructions = () => {
       id="instructions"
       ref={instructionsRef}
       className="relative z-0 pt-[64px] flex justify-center items-center min-h-screen font-mono"
-      style={{
-        backgroundImage:
-          "url('/images/retro-bg.gif'), linear-gradient(135deg, #000000 0%, #0f0f0f 50%, #001a00 100%)",
-        backgroundSize: "cover",
-        backgroundPosition: "center",
-        backgroundRepeat: "no-repeat",
-      }}
     >
-      {/* Retro Neon Animated Background */}
-      {/* (Already included as the first background image in backgroundImage above) */}
-
       {/* CRT Scanline Overlay */}
       <div className="pointer-events-none absolute inset-0 bg-[repeating-linear-gradient(0deg,#00ff0044,#00ff0044_1px,transparent_1px,transparent_6px)] mix-blend-overlay z-0 opacity-20" />
 
