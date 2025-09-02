@@ -3,11 +3,7 @@ import React, { useEffect, useState } from "react";
 const bootLines = [
   "Booting CodeCraft v2.1...",
   "Checking memory .................. OK",
-  "Loading kernel modules ........... OK",
   "Initializing devices ............. OK",
-  "Mounting filesystem .............. OK",
-  "[WARNING] Network latency detected",
-  "Starting network services ........ OK",
   "System ready. Welcome to CodeCraft OS.",
   "Press Enter key to continue_"
 ];

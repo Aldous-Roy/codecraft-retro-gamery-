@@ -1,7 +1,7 @@
 import { useGLTF } from "@react-three/drei";
 import { useState, useEffect } from "react";
 import RazorpayButton from "../components/RazorpayButton";
-
+import logo from "../../public/Codecraft-2.png";
 function RetroPC() {
   const { scene } = useGLTF("/models/retro_pc.glb");
   return <primitive object={scene} scale={2} />;
@@ -37,7 +37,7 @@ export const Header = () => {
   }, []);
 
   return (
-    <div className="relative overflow-hidden w-full h-screen bg-black">
+    <div className="relative w-full h-screen bg-black overflow-hidden select-none">
       <video
         className="absolute w-full h-full object-cover blur-xs"
         src="/0901.mp4"
@@ -46,81 +46,79 @@ export const Header = () => {
         muted
       />
       <div className="absolute w-full h-full bg-black/60" />
-      <div className="relative z-10">
-        <div className="fixed top-0 left-0 w-full flex items-center justify-between px-6 py-4 bg-black/40 backdrop-blur-md border-b-2 border-green-400 z-500">
-          <span className="text-green-400 font-mono text-2xl drop-shadow-[0_0_6px_#00ff00]">⚡ CodeCraft</span>
-          <div className="hidden md:flex gap-6">
-            <a href="/" className="text-green-300 hover:text-green-100 font-mono">Home</a>
-            <a href="#prize" className="text-green-300 hover:text-green-100 font-mono">Prize</a>
-            <a href="#" className="text-green-300 hover:text-green-100 font-mono">Domain</a>
-            <a href="#instructions" className="text-green-300 hover:text-green-100 font-mono">Instructions</a>
-            <Link to="/contact" className="text-green-300 hover:text-green-100 font-mono">Contact</Link>
-            <a href="/masterminds" className="text-green-300 hover:text-green-100 font-mono">Masterminds</a>
+      {/* Navbar */}
+      <nav className="fixed top-0 left-0 w-full bg-black/80 backdrop-blur-sm z-50 border-b border-white/20">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex items-center justify-between h-16">
+          <div className="flex items-center">
+            <img src={logo} alt="CodeCraft 25" className="h-10 w-auto" />
           </div>
-          <button
-            className="md:hidden text-green-300 hover:text-green-100 focus:outline-none"
-            onClick={() => setMenuOpen(!menuOpen)}
-            aria-label="Toggle menu"
-          >
-            <svg className="w-6 h-6" fill="none" stroke="currentColor" strokeWidth={2} strokeLinecap="round" strokeLinejoin="round" viewBox="0 0 24 24">
+          <div className="hidden md:flex space-x-6">
+            <a href="/" className="text-white font-mono text-lg hover:text-gray-300 transition-colors duration-300">Home</a>
+            <a href="#prize" className="text-white font-mono text-lg hover:text-gray-300 transition-colors duration-300">Prize</a>
+            <a href="#" className="text-white font-mono text-lg hover:text-gray-300 transition-colors duration-300">Domain</a>
+            <a href="#instructions" className="text-white font-mono text-lg hover:text-gray-300 transition-colors duration-300">Instructions</a>
+            <a href="#" className="text-white font-mono text-lg hover:text-gray-300 transition-colors duration-300">Contact</a>
+            <a href="#" className="text-white font-mono text-lg hover:text-gray-300 transition-colors duration-300">Masterminds</a>
+          </div>
+          <div className="md:hidden">
+            <button
+              onClick={() => setMenuOpen(!menuOpen)}
+              aria-label="Toggle menu"
+              className="text-white focus:outline-none focus:ring-2 focus:ring-white"
+            >
               {menuOpen ? (
-                <path d="M6 18L18 6M6 6l12 12" />
+                <svg className="h-6 w-6" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" viewBox="0 0 24 24">
+                  <line x1="18" y1="6" x2="6" y2="18" />
+                  <line x1="6" y1="6" x2="18" y2="18" />
+                </svg>
               ) : (
-                <path d="M3 12h18M3 6h18M3 18h18" />
+                <svg className="h-6 w-6" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" viewBox="0 0 24 24">
+                  <line x1="3" y1="12" x2="21" y2="12" />
+                  <line x1="3" y1="6" x2="21" y2="6" />
+                  <line x1="3" y1="18" x2="21" y2="18" />
+                </svg>
               )}
-            </svg>
-          </button>
+            </button>
+          </div>
         </div>
         {menuOpen && (
-          <div className="fixed top-[64px] left-0 w-full bg-black/90 border-b-2 border-green-400 flex flex-col items-center gap-4 py-4 z-40">
-            <a href="/" className="text-green-300 hover:text-green-100 font-mono text-lg">Home</a>
-            <a href="#prize" className="text-green-300 hover:text-green-100 font-mono text-lg">Prize</a>
-            <a href="#" className="text-green-300 hover:text-green-100 font-mono text-lg">Domain</a>
-            <a href="#instructions" className="text-green-300 hover:text-green-100 font-mono text-lg">Instructions</a>
-            <Link to="/contact" className="text-green-300 hover:text-green-100 font-mono">Contact</Link>
-            <a href="/masterminds" className="text-green-300 hover:text-green-100 font-mono text-lg">Masterminds</a>
+          <div className="md:hidden bg-black/90 border-t border-white/20 px-4 py-4 space-y-3 flex flex-col items-center">
+            <a href="/" className="text-white font-mono text-lg hover:text-gray-300 transition-colors duration-300">Home</a>
+            <a href="#prize" className="text-white font-mono text-lg hover:text-gray-300 transition-colors duration-300">Prize</a>
+            <a href="#" className="text-white font-mono text-lg hover:text-gray-300 transition-colors duration-300">Domain</a>
+            <a href="#instructions" className="text-white font-mono text-lg hover:text-gray-300 transition-colors duration-300">Instructions</a>
+            <a href="#" className="text-white font-mono text-lg hover:text-gray-300 transition-colors duration-300">Contact</a>
+            <a href="#" className="text-white font-mono text-lg hover:text-gray-300 transition-colors duration-300">Masterminds</a>
           </div>
         )}
-        <div className="h-screen inset-0 flex flex-col items-center justify-center text-center px-2">
-          <h1 className="text-4xl sm:text-6xl lg:text-7xl text-green-400 animate-opacityPulse">
-            CodeCraft 25<span className="animate-pulse">█</span>
-          </h1>
-          <p className="mt-4 text-base sm:text-lg lg:text-xl text-green-300 opacity-80">
-            Rewinding the future with retro vibes
-          </p>
-          <div className="mt-8">
-            <div className="mt-6 flex gap-4 sm:gap-6 lg:gap-8 justify-center flex-wrap">
-              <div className="border-2 border-green-400 rounded-md p-2 sm:p-4 hover:cursor-wait">
-                <span className="text-3xl sm:text-5xl lg:text-6xl text-green-400 font-mono tracking-widest animate-opacityPulseSoft drop-shadow-[0_0_2px_#00ff00] block">{timeLeft.days}</span>
-                <span className="text-xs sm:text-sm lg:text-lg text-green-300 opacity-70 tracking-wide font-mono block mt-2">DAYS</span>
-              </div>
-              <div className="border-2 border-green-400 rounded-md p-2 sm:p-4 hover:cursor-wait">
-                <span className="text-3xl sm:text-5xl lg:text-6xl text-green-400 font-mono tracking-widest animate-opacityPulseSoft drop-shadow-[0_0_2px_#00ff00] block">{timeLeft.hours}</span>
-                <span className="text-xs sm:text-sm lg:text-lg text-green-300 opacity-70 tracking-wide font-mono block mt-2">HOURS</span>
-              </div>
-              <div className="border-2 border-green-400 rounded-md p-2 sm:p-4 hover:cursor-wait">
-                <span className="text-3xl sm:text-5xl lg:text-6xl text-green-400 font-mono tracking-widest animate-opacityPulseSoft drop-shadow-[0_0_2px_#00ff00] block">{timeLeft.minutes}</span>
-                <span className="text-xs sm:text-sm lg:text-lg text-green-300 opacity-70 tracking-wide font-mono block mt-2">MINUTES</span>
-              </div>
-              <div className="border-2 border-green-400 rounded-md p-2 sm:p-4 hover:cursor-wait">
-                <span className="text-3xl sm:text-5xl lg:text-6xl text-green-400 font-mono tracking-widest animate-opacityPulseSoft drop-shadow-[0_0_2px_#00ff00] block">{timeLeft.seconds}</span>
-                <span className="text-xs sm:text-sm lg:text-lg text-green-300 opacity-70 tracking-wide font-mono block mt-2">SECONDS</span>
-              </div>
-            </div>
+      </nav>
+
+      {/* Hero Section */}
+      <main className="relative z-10 flex flex-col items-center justify-center h-screen pt-16 px-4 text-center">
+        <img src={logo} alt="CodeCraft 25" className="mb-10 w-3/4 max-w-full mx-auto" />
+        <div className="flex flex-wrap justify-center gap-6 mb-12 max-w-full w-full overflow-x-auto px-2">
+          <div className="flex flex-col items-center border border-white rounded-md px-5 py-3 min-w-[80px] flex-shrink-0">
+            <span className="text-5xl sm:text-6xl font-mono text-white tracking-widest animate-opacityPulseSoft drop-shadow-[0_0_2px_#ffffff]">{timeLeft.days}</span>
+            <span className="text-sm sm:text-base font-mono text-white opacity-80 mt-2">DAYS</span>
           </div>
-          <div className="flex justify-center mt-14">
-            {/* <button className="cursor-pointer hover:cursor-pointer text-3xl px-6 py-3 bg-black border-2 border-green-400 text-green-400 font-mono rounded-md hover:bg-green-400 hover:text-black hover:shadow-[0_0_15px_#00ff00] transition-all duration-300">
-              Register Now
-            </button> */}
-            <div className="inline-block w-auto">
-              <RazorpayButton />
-            </div>
+          <div className="flex flex-col items-center border border-white rounded-md px-5 py-3 min-w-[80px] flex-shrink-0">
+            <span className="text-5xl sm:text-6xl font-mono text-white tracking-widest animate-opacityPulseSoft drop-shadow-[0_0_2px_#ffffff]">{timeLeft.hours}</span>
+            <span className="text-sm sm:text-base font-mono text-white opacity-80 mt-2">HOURS</span>
+          </div>
+          <div className="flex flex-col items-center border border-white rounded-md px-5 py-3 min-w-[80px] flex-shrink-0">
+            <span className="text-5xl sm:text-6xl font-mono text-white tracking-widest animate-opacityPulseSoft drop-shadow-[0_0_2px_#ffffff]">{timeLeft.minutes}</span>
+            <span className="text-sm sm:text-base font-mono text-white opacity-80 mt-2">MINUTES</span>
+          </div>
+          <div className="flex flex-col items-center border border-white rounded-md px-5 py-3 min-w-[80px] flex-shrink-0">
+            <span className="text-5xl sm:text-6xl font-mono text-white tracking-widest animate-opacityPulseSoft drop-shadow-[0_0_2px_#ffffff]">{timeLeft.seconds}</span>
+            <span className="text-sm sm:text-base font-mono text-white opacity-80 mt-2">SECONDS</span>
           </div>
         </div>
-      </div>
-    </div>
-  );
-};
+        <div className="w-full max-w-xs px-4">
+          <RazorpayButton />
+        </div>
+      </main>
+
       {/* Subtle opacity pulse animation for countdown numbers */}
       <style>{`
         @keyframes opacityPulseSoft {
@@ -131,3 +129,6 @@ export const Header = () => {
           animation: opacityPulseSoft 2s infinite;
         }
       `}</style>
+    </div>
+  );
+};

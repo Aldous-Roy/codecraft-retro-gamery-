@@ -16,7 +16,7 @@ const coordinators = [
 const Contact = () => {
   const [selected, setSelected] = useState(null);
   const [animateCards, setAnimateCards] = useState(false);
-  const navigate = useNavigate();
+  // const navigate = useNavigate();
 
   const faculty = coordinators.filter(c => c.type === "faculty");
   const students = coordinators.filter(c => c.type === "student");

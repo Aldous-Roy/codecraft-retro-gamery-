@@ -172,7 +172,7 @@ const Instructions = () => {
               <div
                 key={ins.title}
                 onDoubleClick={() => setActiveInstruction(ins)}
-                className="absolute w-64 h-64 sm:w-80 sm:h-80 md:w-[28rem] md:h-[28rem] bg-black/90 rounded-2xl shadow-[0_0_10px_#00ff00,0_0_20px_#00ff00_inset,0_0_30px_#00ff00] p-8 px-4 sm:px-6 flex flex-col justify-center text-green-400 cursor-pointer"
+                className="absolute w-64 h-64 sm:w-80 sm:h-80 md:w-[28rem] md:h-[28rem] bg-black/90 rounded-2xl shadow-[0_0_10px_#00ff00,0_0_20px_#00ff00_inset,0_0_30px_#00ff00] p-8 px-4 sm:px-6 flex flex-col justify-center text-white cursor-pointer border border-white shadow-[0_0_10px_#00ff00]"
                 style={{
                   transform: faceStyles[idx],
                   WebkitBackfaceVisibility: "hidden",
@@ -180,10 +180,9 @@ const Instructions = () => {
                 }}
               >
                 <div className="flex items-center mb-4 select-none">
-                  <span className="text-3xl mr-4">{ins.icon}</span>
-                  <h3 className="font-bold text-2xl">{ins.title}</h3>
+                  <h3 className="font-bold text-2xl text-white">{ins.title}</h3>
                 </div>
-                <p className="flex-grow text-sm sm:text-base mb-4 leading-relaxed">
+                <p className="flex-grow text-sm sm:text-base mb-4 leading-relaxed text-white ">
                   {ins.content}
                 </p>
                 <span className="text-green-300 italic select-text">
@@ -198,18 +197,17 @@ const Instructions = () => {
       {/* Modal for active instruction */}
       {activeInstruction && (
         <div className="fixed inset-0 bg-black/70 flex items-center justify-center z-50 overflow-auto p-4">
-          <div className="bg-black/90 border-2 border-green-400 shadow-[0_0_15px_#00ff00] p-8 rounded-lg max-w-lg w-full relative max-h-[90vh] overflow-y-auto">
+          <div className="bg-black/90 border-2 shadow-[0_0_15px_#00ff00] p-8 rounded-lg max-w-lg w-full relative max-h-[90vh] overflow-y-auto">
             <button
-              className="absolute top-2 right-2 text-green-400 text-xl"
+              className="absolute top-2 right-2 text-white text-xl"
               onClick={() => setActiveInstruction(null)}
             >
               ✖
             </button>
             <div className="flex items-center mb-4 select-none">
-              <span className="text-3xl mr-4">{activeInstruction.icon}</span>
-              <h3 className="font-bold text-2xl">{activeInstruction.title}</h3>
+              <h3 className="font-bold text-2xl text-white">{activeInstruction.title}</h3>
             </div>
-            <p className="mb-4">{activeInstruction.content}</p>
+            <p className="mb-4 text-white">{activeInstruction.content}</p>
             <span className="text-green-300 italic">💬 {activeInstruction.tip}</span>
           </div>
         </div>
