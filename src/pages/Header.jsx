@@ -55,7 +55,7 @@ export const Header = () => {
           <div className="hidden md:flex space-x-6">
             <a href="/" className="text-white font-mono text-lg hover:text-gray-300 transition-colors duration-300">Home</a>
             <a href="#prize" className="text-white font-mono text-lg hover:text-gray-300 transition-colors duration-300">Prize</a>
-            <a href="#" className="text-white font-mono text-lg hover:text-gray-300 transition-colors duration-300">Domain</a>
+            <a href="#domain" className="text-white font-mono text-lg hover:text-gray-300 transition-colors duration-300">Domain</a>
             <a href="#instructions" className="text-white font-mono text-lg hover:text-gray-300 transition-colors duration-300">Instructions</a>
             <a href="#" className="text-white font-mono text-lg hover:text-gray-300 transition-colors duration-300">Contact</a>
             <a href="#" className="text-white font-mono text-lg hover:text-gray-300 transition-colors duration-300">Masterminds</a>
@@ -85,7 +85,7 @@ export const Header = () => {
           <div className="md:hidden bg-black/90 border-t border-white/20 px-4 py-4 space-y-3 flex flex-col items-center">
             <a href="/" className="text-white font-mono text-lg hover:text-gray-300 transition-colors duration-300">Home</a>
             <a href="#prize" className="text-white font-mono text-lg hover:text-gray-300 transition-colors duration-300">Prize</a>
-            <a href="#" className="text-white font-mono text-lg hover:text-gray-300 transition-colors duration-300">Domain</a>
+            <a href="#domain" className="text-white font-mono text-lg hover:text-gray-300 transition-colors duration-300">Domain</a>
             <a href="#instructions" className="text-white font-mono text-lg hover:text-gray-300 transition-colors duration-300">Instructions</a>
             <a href="#" className="text-white font-mono text-lg hover:text-gray-300 transition-colors duration-300">Contact</a>
             <a href="#" className="text-white font-mono text-lg hover:text-gray-300 transition-colors duration-300">Masterminds</a>

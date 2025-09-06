@@ -2,13 +2,13 @@ import { useState, useEffect } from "react";
 import { Header } from "./pages/Header";
 import "./App.css";
 import TerminalNav from "./components/TerminalNav";
-import VantaBackground from "./components/VantaBackground";
 import terminal from "../src/icons/terminal.svg";
 import Prize from "./pages/Prize";
 import Instructions from "./pages/Instructions";
 import TimeLine from "./components/TimeLine";
 import Contact from "./components/Contact";
 import InitialLoading from "./pages/InitialLoading";
+import Domain from "./pages/Domain";
 
 function App() {
   const [showTerminal, setShowTerminal] = useState(false);
@@ -31,6 +31,7 @@ function App() {
         <Header/>
         <Prize/>
         <TimeLine/>
+        <Domain/>
         <Instructions/>
         <button
           className="fixed bottom-4 right-4 w-14 h-14 p-2 neon-border rounded-full bg-white/80 hover:neon-glow flex items-center justify-center z-50"

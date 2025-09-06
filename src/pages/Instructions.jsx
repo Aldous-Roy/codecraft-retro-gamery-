@@ -3,117 +3,66 @@ import testImage from "../../public/vite.svg";
 
 const instructionsData = [
   {
-    title: "Team & Participation",
-    content:
-      "Teams of 3–5 members (no solo entries).\nAll participants must stay on-site for the full 24 hours.",
-    icon: "👥",
-    tip: "Pro tip: Bring your ID for quick check-in!",
-    image: testImage,
+    "title": "Team & Participation",
+    "content": "Teams of 2–4 members (solo entries not allowed).\nAll team members must stay on-site for the full 24-hour duration.",
+    "icon": "👥",
+    "tip": "Remember to coordinate with your teammates on your project idea before the event.",
+    "image": "testImage"
   },
   {
-    title: "Logistics",
-    content:
-      "Report 30 minutes early and follow the event schedule.\nCollege buses available; hostel accommodation for long-distance participants.",
-    icon: "🚌",
-    tip: "Extra tip: Label your cables to avoid mix-ups!",
-    image: testImage,
+    "title": "Essentials",
+    "content": "Bring your own laptops and Ethernet cables.\nValid college ID is required for verification.",
+    "icon": "🎒",
+    "tip": "Double-check your bag to make sure you have all your essential gear!",
+    "image": "testImage"
   },
   {
-    title: "Equipment & Development",
-    content:
-      "Bring your own laptops and Ethernet cables.\nAll project work must be done during the hackathon.\nOnly small boilerplate code is allowed if declared in README.",
-    icon: "💻",
-    tip: "Hint: Test your setup before the event!",
-    image: testImage,
+    "title": "Logistics",
+    "content": "Arrive at least 30 minutes before the event.\nCollege buses are available on specific routes; others must arrange their own transport.",
+    "icon": "🗺️",
+    "tip": "Plan your travel in advance to arrive on time and avoid a rush.",
+    "image": "testImage"
   },
   {
-    title: "Facilities & Conduct",
-    content:
-      "Meals provided: Lunch & Dinner (Day 1), Breakfast (Day 2).\nMaintain respectful behavior — unsafe or illegal activity leads to removal.",
-    icon: "🍴",
-    tip: "Fun fact: We have vegan options too!",
-    image: testImage,
+    "title": "Project Rules",
+    "content": "All work must be done during the hackathon.\nMinor boilerplate code is allowed if declared in the README.",
+    "icon": "🛠️",
+    "tip": "Have a clear project plan and declare any pre-existing code to avoid disqualification.",
+    "image": "testImage"
+  },
+  {
+    "title": "Food & Refreshments",
+    "content": "Lunch & dinner on Day 1 and breakfast on Day 2 will be provided to all participants.",
+    "icon": "🍔",
+    "tip": "Pro tip: Stay hydrated and grab a bite to keep your energy up during the event!",
+    "image": "testImage"
+  },
+  {
+    "title": "Code of Conduct",
+    "content": "Maintain respectful behavior.\nHarassment or illegal activities will result in immediate removal from the event.",
+    "icon": "🛡️",
+    "tip": "Pro tip: Let's create a welcoming and productive environment for everyone!",
+    "image": "testImage"
+  },
+  {
+    "title": "Attire & Belongings",
+    "content": "A Formal attire is requested.\nParticipants are responsible for their personal belongings.",
+    "icon": "👔",
+    "tip": "Pro tip: While formal, dress comfortably for a 24-hour coding marathon!",
+    "image": "testImage"
   },
 ];
 
 const Instructions = () => {
-  const [rotationY, setRotationY] = useState(0);
-  const cubeRef = useRef(null);
-  const dragging = useRef(false);
-  const lastX = useRef(0);
   const [activeInstruction, setActiveInstruction] = useState(null);
   const instructionsRef = useRef(null);
-  const [animateCube, setAnimateCube] = useState(false);
-
-  // Handle wheel scroll to rotate cube
-  const handleWheel = (e) => {
-    e.preventDefault();
-    setRotationY((prev) => prev + e.deltaY * 0.3);
-  };
-
-  // Handle drag start
-  const handleMouseDown = (e) => {
-    dragging.current = true;
-    lastX.current = e.clientX;
-  };
-
-  // Handle drag move
-  const handleMouseMove = (e) => {
-    if (!dragging.current) return;
-    const deltaX = e.clientX - lastX.current;
-    lastX.current = e.clientX;
-    setRotationY((prev) => prev + deltaX * 0.5);
-  };
-
-  // Handle drag end
-  const handleMouseUp = () => {
-    dragging.current = false;
-  };
-
-  // Touch events for mobile
-  const handleTouchStart = (e) => {
-    dragging.current = true;
-    lastX.current = e.touches[0].clientX;
-  };
-
-  const handleTouchMove = (e) => {
-    if (!dragging.current) return;
-    const deltaX = e.touches[0].clientX - lastX.current;
-    lastX.current = e.touches[0].clientX;
-    setRotationY((prev) => prev + deltaX * 0.5);
-  };
-
-  const handleTouchEnd = () => {
-    dragging.current = false;
-  };
-
-  useEffect(() => {
-    const cube = cubeRef.current;
-    if (!cube) return;
-
-    cube.addEventListener("wheel", handleWheel, { passive: false });
-    cube.addEventListener("mousedown", handleMouseDown);
-    window.addEventListener("mousemove", handleMouseMove);
-    window.addEventListener("mouseup", handleMouseUp);
-    cube.addEventListener("touchstart", handleTouchStart, { passive: false });
-    cube.addEventListener("touchmove", handleTouchMove, { passive: false });
-    window.addEventListener("touchend", handleTouchEnd);
-
-    return () => {
-      cube.removeEventListener("wheel", handleWheel);
-      cube.removeEventListener("mousedown", handleMouseDown);
-      window.removeEventListener("mousemove", handleMouseMove);
-      window.removeEventListener("mouseup", handleMouseUp);
-      cube.removeEventListener("touchstart", handleTouchStart);
-      cube.removeEventListener("touchmove", handleTouchMove);
-      window.removeEventListener("touchend", handleTouchEnd);
-    };
-  }, []);
 
   useEffect(() => {
     const observer = new IntersectionObserver(
       ([entry]) => {
-        if (entry.isIntersecting) setAnimateCube(true);
+        if (entry.isIntersecting) {
+          // Could add animation or other effects here if needed
+        }
       },
       { threshold: 0.5 }
     );
@@ -123,25 +72,16 @@ const Instructions = () => {
     };
   }, []);
 
-  // Map each instruction to a cube face style and content
-  // Faces: front, right, back, left
-  const faceStyles = [
-    "rotateY(0deg) translateZ(200px)",
-    "rotateY(90deg) translateZ(200px)",
-    "rotateY(180deg) translateZ(200px)",
-    "rotateY(-90deg) translateZ(200px)",
-  ];
-
   return (
     <div
       id="instructions"
       ref={instructionsRef}
-      className="relative z-0 pt-[64px] flex justify-center items-center min-h-screen font-mono"
+      className="relative z-0 pt-[120px] flex justify-center items-center min-h-screen font-mono"
     >
       {/* CRT Scanline Overlay */}
       <div className="pointer-events-none absolute inset-0 bg-[repeating-linear-gradient(0deg,#00ff0044,#00ff0044_1px,transparent_1px,transparent_6px)] mix-blend-overlay z-0 opacity-20" />
 
-      <div className="relative z-10 flex flex-col items-center w-full max-w-4xl px-6 sm:px-8 py-6 sm:py-12 text-green-400">
+      <div className="relative z-10 flex flex-col items-center w-full max-w-6xl px-6 sm:px-8 py-6 sm:py-12 text-green-400">
         {/* Terminal-style header with blinking cursor */}
         <div className="w-full px-4 mb-8 select-none">
           <div className="flex items-center text-3xl sm:text-4xl">
@@ -150,47 +90,25 @@ const Instructions = () => {
           </div>
         </div>
 
-        <p className="mb-6 text-green-300 text-center select-none px-4 sm:px-8">
-          Roll this cube and double tap for more info
+        <p className="mb-10 text-green-300 text-center select-none px-4 sm:px-8 max-w-3xl">
+          Quick facts and essential rules for the hackathon.
         </p>
 
-        {/* Cube container with perspective and jump animation */}
-        <div
-          ref={cubeRef}
-          className={`w-64 h-64 sm:w-80 sm:h-80 md:w-[28rem] md:h-[28rem] ${animateCube ? "jump" : ""}`}
-          style={{ perspective: "1000px", cursor: "grab", overflow: "visible" }}
-        >
-          {/* Cube */}
-          <div
-            className="relative w-full h-full transition-transform duration-300 ease-out"
-            style={{
-              transformStyle: "preserve-3d",
-              transform: `translateZ(-200px) rotateY(${rotationY}deg)`,
-            }}
-          >
-            {instructionsData.map((ins, idx) => (
-              <div
-                key={ins.title}
-                onDoubleClick={() => setActiveInstruction(ins)}
-                className="absolute w-64 h-64 sm:w-80 sm:h-80 md:w-[28rem] md:h-[28rem] bg-black/90 rounded-2xl shadow-[0_0_10px_#00ff00,0_0_20px_#00ff00_inset,0_0_30px_#00ff00] p-8 px-4 sm:px-6 flex flex-col justify-center text-white cursor-pointer border border-white shadow-[0_0_10px_#00ff00]"
-                style={{
-                  transform: faceStyles[idx],
-                  WebkitBackfaceVisibility: "hidden",
-                  backfaceVisibility: "hidden",
-                }}
-              >
-                <div className="flex items-center mb-4 select-none">
-                  <h3 className="font-bold text-2xl text-white">{ins.title}</h3>
-                </div>
-                <p className="flex-grow text-sm sm:text-base mb-4 leading-relaxed text-white ">
-                  {ins.content}
-                </p>
-                <span className="text-green-300 italic select-text">
-                  💬 {ins.tip}
-                </span>
-              </div>
-            ))}
-          </div>
+        {/* Grid layout for instructions */}
+        <div className="grid grid-cols-1 sm:grid-cols-2 gap-6 w-full px-4 sm:px-0">
+          {instructionsData.map((ins) => (
+            <div
+              key={ins.title}
+              onDoubleClick={() => setActiveInstruction(ins)}
+              className="bg-black/90 rounded-2xl shadow-[0_0_10px_#00ff00,0_0_20px_#00ff00_inset] p-6 cursor-pointer border border-white hover:shadow-[0_0_15px_#00ff00,0_0_25px_#00ff00_inset] transition-shadow duration-300"
+            >
+              <h3 className="font-bold text-2xl text-white mb-4">{ins.title}</h3>
+              <p className="text-white whitespace-pre-line mb-4 leading-relaxed text-sm sm:text-base">
+                {ins.content}
+              </p>
+              <span className="text-green-300 italic select-text">💬 {ins.tip}</span>
+            </div>
+          ))}
         </div>
       </div>
 
@@ -207,7 +125,7 @@ const Instructions = () => {
             <div className="flex items-center mb-4 select-none">
               <h3 className="font-bold text-2xl text-white">{activeInstruction.title}</h3>
             </div>
-            <p className="mb-4 text-white">{activeInstruction.content}</p>
+            <p className="mb-4 text-white whitespace-pre-line">{activeInstruction.content}</p>
             <span className="text-green-300 italic">💬 {activeInstruction.tip}</span>
           </div>
         </div>
@@ -222,23 +140,10 @@ const Instructions = () => {
         .blink {
           animation: blink 1.2s step-start infinite;
         }
-        @keyframes jump {
-          0% { transform: translateY(-200px); }
-          50% { transform: translateY(20px); }
-          70% { transform: translateY(-10px); }
-          100% { transform: translateY(0); }
-        }
-        .jump {
-          animation: jump 1s ease-out forwards;
-        }
         @media (max-width: 640px) {
           #instructions > div > div:nth-child(3) {
             width: 90vw !important;
-            height: 90vw !important;
-          }
-          #instructions > div > div:nth-child(3) > div > div {
-            width: 90vw !important;
-            height: 90vw !important;
+            height: auto !important;
           }
         }
       `}</style>
