@@ -9,6 +9,8 @@ import TimeLine from "./components/TimeLine";
 import Contact from "./components/Contact";
 import InitialLoading from "./pages/InitialLoading";
 import Domain from "./pages/Domain";
+import Footer from "./pages/Footer";
+import Maps from "./components/Maps";
 
 function App() {
   const [showTerminal, setShowTerminal] = useState(false);
@@ -21,9 +23,9 @@ function App() {
     return () => clearTimeout(timer);
   }, []);
 
-  if (loading) {
-    return <InitialLoading />;
-  }
+  // if (loading) {
+  //   return <InitialLoading />;
+  // }
 
   return (
     <>
@@ -33,6 +35,9 @@ function App() {
         <TimeLine/>
         <Domain/>
         <Instructions/>
+        <Maps/>
+        <Footer/>
+        
         <button
           className="fixed bottom-4 right-4 w-14 h-14 p-2 neon-border rounded-full bg-white/80 hover:neon-glow flex items-center justify-center z-50"
           onClick={() => setShowTerminal(true)}

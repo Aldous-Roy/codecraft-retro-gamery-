@@ -37,7 +37,7 @@ export const Header = () => {
   }, []);
 
   return (
-    <div className="relative w-full h-screen bg-black overflow-hidden select-none">
+    <div id="home" className="relative w-full h-screen bg-black overflow-hidden select-none">
       <video
         className="absolute w-full h-full object-cover blur-xs"
         src="/0901.mp4"
@@ -53,7 +53,7 @@ export const Header = () => {
             <img src={logo} alt="CodeCraft 25" className="h-10 w-auto" />
           </div>
           <div className="hidden md:flex space-x-6">
-            <a href="/" className="text-white font-mono text-lg hover:text-gray-300 transition-colors duration-300">Home</a>
+            <a href="#home" className="text-white font-mono text-lg hover:text-gray-300 transition-colors duration-300">Home</a>
             <a href="#prize" className="text-white font-mono text-lg hover:text-gray-300 transition-colors duration-300">Prize</a>
             <a href="#domain" className="text-white font-mono text-lg hover:text-gray-300 transition-colors duration-300">Domain</a>
             <a href="#instructions" className="text-white font-mono text-lg hover:text-gray-300 transition-colors duration-300">Instructions</a>
@@ -83,7 +83,7 @@ export const Header = () => {
         </div>
         {menuOpen && (
           <div className="md:hidden bg-black/90 border-t border-white/20 px-4 py-4 space-y-3 flex flex-col items-center">
-            <a href="/" className="text-white font-mono text-lg hover:text-gray-300 transition-colors duration-300">Home</a>
+            <a href="#home" className="text-white font-mono text-lg hover:text-gray-300 transition-colors duration-300">Home</a>
             <a href="#prize" className="text-white font-mono text-lg hover:text-gray-300 transition-colors duration-300">Prize</a>
             <a href="#domain" className="text-white font-mono text-lg hover:text-gray-300 transition-colors duration-300">Domain</a>
             <a href="#instructions" className="text-white font-mono text-lg hover:text-gray-300 transition-colors duration-300">Instructions</a>
