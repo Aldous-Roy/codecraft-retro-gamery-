@@ -13,12 +13,12 @@ const Masterminds = () => {
     { name: "Rishi Vel A", phone: "86105-56160", image: "jane.png" },
     { name: "Shreya R", phone: "91763-35274", image: "jane.png" },
     { name: "Kirithika", phone: "93603-03848", image: "jane.png" },
-    { name: "Diviya Darshini", phone: "86101-59124", image: "jane.png" },
+    { name: "Diviya Darshini", phone: "86101-59124", image: "dd.jpeg" },
   ];
   return (
     <div id="masterminds" className="min-h-screen w-full flex flex-col items-center my-20 ">
       <section className="w-full max-w-4xl">
-        <h2 className="text-center mb-6 text-4xl">Faculty Coordinator</h2>
+        <h2 className="text-center mb-6 text-4xl">Faculty Coordinators</h2>
         <div className="flex flex-wrap justify-center gap-14">
           {faculty.map((f) => (
             <div key={f.name}>
@@ -35,7 +35,7 @@ const Masterminds = () => {
       </section>
 
       <section className="w-full max-w-4xl mt-12">
-        <h2 className="text-center mb-6 text-3xl">Students Coordinator</h2>
+        <h2 className="text-center mb-6 text-3xl">Students Coordinators</h2>
         <div className="flex flex-wrap justify-center gap-8">
           {students.map((s) => (
             <div key={s.name} className="text-center flex flex-col items-center gap-3">
