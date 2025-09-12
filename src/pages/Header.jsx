@@ -57,8 +57,8 @@ export const Header = () => {
             <a href="#prize" className="text-white font-mono text-lg hover:text-gray-300 transition-colors duration-300">Prize</a>
             <a href="#domain" className="text-white font-mono text-lg hover:text-gray-300 transition-colors duration-300">Domain</a>
             <a href="#instructions" className="text-white font-mono text-lg hover:text-gray-300 transition-colors duration-300">Instructions</a>
-            <a href="#" className="text-white font-mono text-lg hover:text-gray-300 transition-colors duration-300">Contact</a>
-            <a href="#" className="text-white font-mono text-lg hover:text-gray-300 transition-colors duration-300">Masterminds</a>
+            <a href="#sponsors" className="text-white font-mono text-lg hover:text-gray-300 transition-colors duration-300">Sponsers</a>
+            <a href="#masterminds" className="text-white font-mono text-lg hover:text-gray-300 transition-colors duration-300">Masterminds</a>
           </div>
           <div className="md:hidden">
             <button
@@ -87,8 +87,8 @@ export const Header = () => {
             <a href="#prize" className="text-white font-mono text-lg hover:text-gray-300 transition-colors duration-300">Prize</a>
             <a href="#domain" className="text-white font-mono text-lg hover:text-gray-300 transition-colors duration-300">Domain</a>
             <a href="#instructions" className="text-white font-mono text-lg hover:text-gray-300 transition-colors duration-300">Instructions</a>
-            <a href="#" className="text-white font-mono text-lg hover:text-gray-300 transition-colors duration-300">Contact</a>
-            <a href="#" className="text-white font-mono text-lg hover:text-gray-300 transition-colors duration-300">Masterminds</a>
+            <a href="#sponsors" className="text-white font-mono text-lg hover:text-gray-300 transition-colors duration-300">Sponsers</a>
+            <a href="#masterminds" className="text-white font-mono text-lg hover:text-gray-300 transition-colors duration-300">Masterminds</a>
           </div>
         )}
       </nav>

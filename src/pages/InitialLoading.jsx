@@ -55,9 +55,13 @@ const InitialLoading = ({ onFinish }) => {
   return (
     <div className="relative flex items-center justify-center min-h-screen bg-black text-[#00ff00] font-mono text-lg p-6">
       <pre className="w-full max-w-2xl whitespace-pre-wrap relative z-10">
-        {lines.join("\n")}
-        {currentLine}
-        {!isComplete && <span className="animate-pulse">_</span>}
+        {lines.map((line, idx) => (
+          <div key={idx}>{line}</div>
+        ))}
+        <div>
+          {currentLine}
+          {!isComplete && <span className="animate-pulse">_</span>}
+        </div>
       </pre>
     </div>
   );

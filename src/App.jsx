@@ -11,6 +11,8 @@ import InitialLoading from "./pages/InitialLoading";
 import Domain from "./pages/Domain";
 import Footer from "./pages/Footer";
 import Maps from "./components/Maps";
+import Sponsers from "./pages/Sponsers";
+import Masterminds from "./pages/Masterminds";
 
 function App() {
   const [showTerminal, setShowTerminal] = useState(false);
@@ -23,9 +25,9 @@ function App() {
     return () => clearTimeout(timer);
   }, []);
 
-  // if (loading) {
-  //   return <InitialLoading />;
-  // }
+  if (loading) {
+    return <InitialLoading />;
+  }
 
   return (
     <>
@@ -35,6 +37,8 @@ function App() {
         <TimeLine/>
         <Domain/>
         <Instructions/>
+        <Sponsers/>
+        <Masterminds/>
         <Maps/>
         <Footer/>
         

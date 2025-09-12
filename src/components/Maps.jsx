@@ -8,7 +8,7 @@ const Maps = () => {
     >
       <section>
         <p className="text-4xl ">Location</p>
-        <p className="pt-3 text-xl">Venue:Apple Hall</p>
+        <p className="py-4 text-xl">Venue:Apple Hall</p>
       </section>
       <iframe
         title="Sairam College Map"
