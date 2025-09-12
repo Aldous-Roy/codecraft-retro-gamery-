@@ -7,7 +7,7 @@ const Prize = () => {
       className="bg-black text-green-400 font-mono min-h-screen p-8 flex flex-col items-center gap-6 box-border"
     >
       <h1 className="text-4xl mb-4 text-center text-green-500 drop-shadow-[0_0_10px_#00ff00] ">
-        Prize Pool: ₹10,000
+        Prize Pool: ₹10,000+
       </h1>
 
       <div className="flex flex-col gap-4 mt-8 max-w-md w-full">

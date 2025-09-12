@@ -9,10 +9,10 @@ const Masterminds = () => {
   ];
   const students = [
     { name: "Aldous Roy", phone: "93449-25334", image: "Aldous.jpeg" },
-    { name: "Selva Vignesh S M", phone: "90804-13155", image: "jane.png" },
-    { name: "Rishi Vel A", phone: "86105-56160", image: "jane.png" },
-    { name: "Shreya R", phone: "91763-35274", image: "jane.png" },
-    { name: "Kirithika", phone: "93603-03848", image: "jane.png" },
+    { name: "Selva Vignesh S M", phone: "90804-13155", image: "selva.jpeg" },
+    { name: "Rishi Vel A", phone: "86105-56160", image: "rishi.jpeg" },
+    { name: "Shreya R", phone: "91763-35274", image: "shreya.jpeg" },
+    { name: "Kirithika", phone: "93603-03848", image: "kirithika.jpeg" },
     { name: "Diviya Darshini", phone: "86101-59124", image: "dd.jpeg" },
   ];
   return (

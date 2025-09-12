@@ -17,7 +17,7 @@ export const Header = () => {
   const [menuOpen, setMenuOpen] = useState(false);
 
   useEffect(() => {
-    const eventDate = new Date("2025-10-09T00:00:00");
+    const eventDate = new Date("2025-10-13T00:00:00");
     const updateCountdown = () => {
       const now = new Date();
       const diff = eventDate - now;
