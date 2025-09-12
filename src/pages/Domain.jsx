@@ -146,13 +146,14 @@ const Domain = () => {
         </div>
 
         <p className="mb-6 text-green-300 text-center select-none px-4 sm:px-8">
-          Develop web/mobile applications with the magic of AI.
+          Develop web/mobile applications with the magic of AI.<br/>
         </p>
+         <span className="pt-10">Rotate of the cube for more </span>
 
         {/* Cube container with perspective and jump animation */}
         <div
           ref={cubeRef}
-          className={`cube-container w-[70vw] h-[70vw] max-w-[20rem] max-h-[20rem] md:max-w-[24rem] md:max-h-[24rem] lg:max-w-[28rem] lg:max-h-[28rem] p-1 ${animateCube ? "jump" : ""}`}
+          className={`cube-container pt-10 w-[70vw] h-[70vw] max-w-[20rem] max-h-[20rem] md:max-w-[24rem] md:max-h-[24rem] lg:max-w-[28rem] lg:max-h-[28rem] p-1 ${animateCube ? "jump" : ""}`}
           style={{ perspective: "1000px", cursor: "grab", overflow: "visible" }}
         >
           {/* Cube */}

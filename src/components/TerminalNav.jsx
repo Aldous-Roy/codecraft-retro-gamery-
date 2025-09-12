@@ -11,7 +11,6 @@ export default function TerminalNav() {
   const logsEndRef = useRef(null);
 
   useEffect(() => {
-    // Scroll to bottom when logs update
     logsEndRef.current?.scrollIntoView({ behavior: "smooth" });
   }, [logs]);
 
@@ -21,27 +20,39 @@ export default function TerminalNav() {
       let newLogs = [...logs, `> ${command}`];
 
       if (command === "help") {
-        newLogs.push(
-          "Available commands: cd home, cd about, cd events, cd contact, ls, clear, echo, whoami, date"
-        );
+        newLogs.push("Available commands:");
+        newLogs.push("ls          - list sections");
+        newLogs.push("cd <name>   - go to section (home, prize, domain, instructions, contact, masterminds)");
+        newLogs.push("clear       - clear the terminal");
+        newLogs.push("echo <msg>  - print a message");
+        newLogs.push("whoami      - show user");
+        newLogs.push("date        - show hackathon date");
       } else if (command === "ls") {
-        newLogs.push("home   about   events   contact");
+        newLogs.push("home   prize   domain   instructions   contact   masterminds");
       } else if (command === "clear") {
         newLogs = [];
       } else if (command.startsWith("cd ")) {
         const target = command.split(" ")[1];
-        if (["home", "about", "events", "contact"].includes(target)) {
+        const validSections = [
+          "home",
+          "prize",
+          "domain",
+          "instructions",
+          "contact",
+          "masterminds",
+        ];
+        if (validSections.includes(target)) {
           newLogs.push(`Navigating to ${target}...`);
           document.getElementById(target)?.scrollIntoView({ behavior: "smooth" });
         } else {
           newLogs.push(`bash: cd: ${target}: No such directory`);
         }
       } else if (command.startsWith("echo ")) {
-        newLogs.push(command.slice(5));
+        newLogs.push("Welcome to CodeCraft 2025!");
       } else if (command === "whoami") {
         newLogs.push("guest");
       } else if (command === "date") {
-        newLogs.push(new Date().toString());
+        newLogs.push("Hackathon starts on: Thu Oct 9 2025, 00:00 IST");
       } else {
         newLogs.push("command not found");
       }
@@ -75,13 +86,14 @@ export default function TerminalNav() {
 
   return (
     <div
-      className="w-11/12 max-w-4xl bg-black rounded-md font-mono text-green-400 p-4 border-4"
+      className="w-11/12 max-w-4xl bg-black rounded-md font-mono text-green-400 p-4 border-4 flex flex-col"
       style={{
         borderImageSlice: 1,
         borderWidth: "4px",
         borderImageSource:
           "linear-gradient(45deg, #00ff00, #00ccff, #ff00ff, #00ff00)",
-        boxShadow: "0 0 15px 2px rgba(0, 255, 0, 0.6), 0 0 8px 1px rgba(0, 204, 255, 0.5)",
+        boxShadow:
+          "0 0 15px 2px rgba(0, 255, 0, 0.6), 0 0 8px 1px rgba(0, 204, 255, 0.5)",
       }}
     >
       <div
