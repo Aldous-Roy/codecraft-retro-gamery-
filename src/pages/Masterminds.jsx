@@ -12,8 +12,8 @@ const Masterminds = () => {
     { name: "Selva Vignesh S M", phone: "90804-13155", image: "selva.jpeg" },
     { name: "Rishi Vel A", phone: "86105-56160", image: "rishi.jpeg" },
     { name: "Shreya R", phone: "91763-35274", image: "shreya.jpeg" },
-    { name: "Kirithika", phone: "93603-03848", image: "kirithika.jpeg" },
-    { name: "Diviya Darshini", phone: "86101-59124", image: "dd.jpeg" },
+    { name: "Kirithika S", phone: "93603-03848", image: "kirithika.jpeg" },
+    { name: "Diviya Darshini V", phone: "86101-59124", image: "dd.jpeg" },
   ];
   return (
     <div id="masterminds" className="min-h-screen w-full flex flex-col items-center my-20 ">
