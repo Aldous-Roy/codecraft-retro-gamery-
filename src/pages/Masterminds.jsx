@@ -3,9 +3,9 @@ import React from "react";
 const Masterminds = () => {
   // Separate arrays for faculty and students
   const faculty = [
-    { name: "Mrs.Nithya", image: "nithya.png", position: "Head Of The Departmant" },
-    { name: "Mrs.Shiny", image: "shiny.png", position: "Staff Coordinator" },
-    { name: "Mr.Yuvaraj", image: "yuvaraj.png", position: "Staff Coordinator" },
+    { name: "Dr.M.Nithya", image: "nithya.png", position: "Head Of The Departmant" },
+    { name: "Mrs.A.Shiny", image: "shiny.png", position: "Staff Coordinator" },
+    { name: "Mr.G.Yuvaraj", image: "yuvaraj.png", position: "Staff Coordinator" },
   ];
   const students = [
     { name: "Aldous Roy", phone: "93449-25334", image: "Aldous.jpeg" },
