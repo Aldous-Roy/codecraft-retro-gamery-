@@ -133,11 +133,10 @@ const Domain = () => {
       ref={instructionsRef}
       className="relative z-0 flex justify-center items-center min-h-screen font-mono"
     >
-      {/* CRT Scanline Overlay */}
+
       <div className="pointer-events-none absolute inset-0 bg-[repeating-linear-gradient(0deg,#00ff0044,#00ff0044_1px,transparent_1px,transparent_6px)] mix-blend-overlay z-0 opacity-20" />
 
       <div className="relative z-10 flex flex-col items-center h-auto w-full max-w-4xl px-6 sm:px-8 py-6 sm:py-12 text-green-400">
-        {/* Terminal-style header with blinking cursor */}
         <div className="w-full px-4 mb-8 select-none">
           <div className="flex items-center text-3xl sm:text-4xl">
             <span className="mr-2">&gt; Domain & Development</span>
