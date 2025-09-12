@@ -45,7 +45,9 @@ const Masterminds = () => {
                 className="w-32 h-32 md:w-40 md:h-40 object-cover rounded-full mx-auto"
               />
               <h3>{s.name}</h3>
-              <p>{s.phone}</p>
+              <a href={`tel:${s.phone}`} className="text-green-400 hover:underline">
+                {s.phone}
+              </a>
             </div>
           ))}
         </div>
