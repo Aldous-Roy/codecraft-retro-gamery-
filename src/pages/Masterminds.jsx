@@ -22,11 +22,13 @@ const Masterminds = () => {
         <div className="flex flex-wrap justify-center gap-14">
           {faculty.map((f) => (
             <div key={f.name}>
-              <img
-                src={f.image}
-                alt={f.name}
-                className="w-32 h-32 md:w-40 md:h-40 object-cover rounded-full mx-auto"
-              />
+              <div className="bg-[#111] p-2 rounded-full">
+                <img
+                  src={f.image}
+                  alt={f.name}
+                  className="w-32 h-32 md:w-40 md:h-40 object-cover rounded-full"
+                />
+              </div>
               <h3 className="text-center text-lg mt-2">{f.name}</h3>
               <p className="text-center text-sm">{f.position}</p>
             </div>
