@@ -52,7 +52,7 @@ export default function TerminalNav() {
       } else if (command === "whoami") {
         newLogs.push("guest");
       } else if (command === "date") {
-        newLogs.push("Hackathon starts on: Thu Oct 9 2025, 00:00 IST");
+        newLogs.push("Hackathon starts on: Thu Oct 13 2025, 00:00 IST");
       } else {
         newLogs.push("command not found");
       }
