@@ -3,7 +3,7 @@ import React from "react";
 const Masterminds = () => {
   // Separate arrays for faculty and students
   const faculty = [
-    { name: "Dr.M.Nithya", image: "nithya.png", position: "Head Of The Departmant" },
+    { name: "Dr.M.Nithya", image: "nithya.png", position: "Head Of The Department" },
     { name: "Mrs.A.Shiny", image: "shiny.png", position: "Staff Coordinator" },
     { name: "Mr.G.Yuvaraj", image: "yuvaraj.png", position: "Staff Coordinator" },
   ];
