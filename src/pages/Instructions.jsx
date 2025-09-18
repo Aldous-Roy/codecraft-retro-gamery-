@@ -6,7 +6,7 @@ const instructionsData = [
     "title": "Team & Participation",
     "content": "Teams of 2–4 members (solo entries not allowed).\nAll team members must stay on-site for the full 24-hour duration.",
     "icon": "👥",
-    "tip": "Remember to coordinate with your teammates on your project idea before the event.",
+    "tip": "Remember to coordinate with your teammates on your project idea.",
     "image": "testImage"
   },
   {
@@ -18,7 +18,7 @@ const instructionsData = [
   },
   {
     "title": "Logistics",
-    "content": "Arrive at least 30 minutes before the event.\nCollege buses are available on specific routes; others must arrange their own transport.",
+    "content": "Arrive at least 30 minutes before the event on their own .",
     "icon": "🗺️",
     "tip": "Plan your travel in advance to arrive on time and avoid a rush.",
     "image": "testImage"
