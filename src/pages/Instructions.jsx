@@ -3,53 +3,67 @@ import testImage from "../../public/vite.svg";
 
 const instructionsData = [
   {
-    "title": "Team & Participation",
-    "content": "Teams of 2–4 members (solo entries not allowed).\nAll team members must stay on-site for the full 24-hour duration.",
-    "icon": "👥",
-    "tip": "Remember to coordinate with your teammates on your project idea.",
-    "image": "testImage"
+    title: "Eligibility",
+    content:
+      "This event is open exclusively to students from institutions other than Sairam.\nWe truly appreciate the enthusiasm from Sairam students, but this particular event is designed to encourage wider participation from different colleges.",
+    icon: "🎓",
+    tip: "Check with your college eligibility before registering.",
+    image: "eligibilityImage",
   },
   {
-    "title": "Essentials",
-    "content": "Bring your own laptops and Ethernet cables.\nValid college ID is required for verification.",
-    "icon": "🎒",
-    "tip": "Double-check your bag to make sure you have all your essential gear!",
-    "image": "testImage"
+    title: "Team & Participation",
+    content:
+      "Teams of 2–4 members (solo entries not allowed).\nAll team members must stay on-site for the full 24-hour duration.",
+    icon: "👥",
+    tip: "Remember to coordinate with your teammates on your project idea.",
+    image: "testImage",
   },
   {
-    "title": "Logistics",
-    "content": "Arrive at least 30 minutes before the event on their own .",
-    "icon": "🗺️",
-    "tip": "Plan your travel in advance to arrive on time and avoid a rush.",
-    "image": "testImage"
+    title: "Essentials",
+    content:
+      "Bring your own laptops and Ethernet cables.\nValid college ID is required for verification.",
+    icon: "🎒",
+    tip: "Double-check your bag to make sure you have all your essential gear!",
+    image: "testImage",
   },
   {
-    "title": "Project Rules",
-    "content": "All work must be done during the hackathon.\nMinor boilerplate code is allowed if declared in the README.",
-    "icon": "🛠️",
-    "tip": "Have a clear project plan and declare any pre-existing code to avoid disqualification.",
-    "image": "testImage"
+    title: "Logistics",
+    content: "Arrive at least 30 minutes before the event on their own .",
+    icon: "🗺️",
+    tip: "Plan your travel in advance to arrive on time and avoid a rush.",
+    image: "testImage",
   },
   {
-    "title": "Food & Refreshments",
-    "content": "Lunch & dinner on Day 1 and breakfast on Day 2 will be provided to all participants.",
-    "icon": "🍔",
-    "tip": "Pro tip: Stay hydrated and grab a bite to keep your energy up during the event!",
-    "image": "testImage"
+    title: "Project Rules",
+    content:
+      "All work must be done during the hackathon.\nMinor boilerplate code is allowed if declared in the README.",
+    icon: "🛠️",
+    tip: "Have a clear project plan and declare any pre-existing code to avoid disqualification.",
+    image: "testImage",
   },
   {
-    "title": "Code of Conduct",
-    "content": "Maintain respectful behavior.\nHarassment or illegal activities will result in immediate removal from the event.",
-    "icon": "🛡️",
-    "tip": "Pro tip: Let's create a welcoming and productive environment for everyone!",
-    "image": "testImage"
+    title: "Food & Refreshments",
+    content:
+      "Lunch & dinner on Day 1 and breakfast on Day 2 will be provided to all participants.",
+    icon: "🍔",
+    tip: "Pro tip: Stay hydrated and grab a bite to keep your energy up during the event!",
+    image: "testImage",
   },
   {
-    "title": "Attire & Belongings",
-    "content": "A Formal attire is requested.\nParticipants are responsible for their personal belongings.",
-    "icon": "👔",
-    "tip": "Pro tip: While formal, dress comfortably for a 24-hour coding marathon!",
-    "image": "testImage"
+    title: "Code of Conduct",
+    content:
+      "Maintain respectful behavior.\nHarassment or illegal activities will result in immediate removal from the event.",
+    icon: "🛡️",
+    tip: "Pro tip: Let's create a welcoming and productive environment for everyone!",
+    image: "testImage",
+  },
+  {
+    title: "Attire & Belongings",
+    content:
+      "A Formal attire is requested.\nParticipants are responsible for their personal belongings.",
+    icon: "👔",
+    tip: "Pro tip: While formal, dress comfortably for a 24-hour coding marathon!",
+    image: "testImage",
   },
 ];
 
@@ -102,11 +116,15 @@ const Instructions = () => {
               onDoubleClick={() => setActiveInstruction(ins)}
               className="bg-black/90 rounded-2xl shadow-[0_0_10px_#00ff00,0_0_20px_#00ff00_inset] p-6 cursor-pointer border border-white hover:shadow-[0_0_15px_#00ff00,0_0_25px_#00ff00_inset] transition-shadow duration-300"
             >
-              <h3 className="font-bold text-2xl text-white mb-4">{ins.title}</h3>
+              <h3 className="font-bold text-2xl text-white mb-4">
+                {ins.title}
+              </h3>
               <p className="text-white whitespace-pre-line mb-4 leading-relaxed text-sm sm:text-base">
                 {ins.content}
               </p>
-              <span className="text-green-300 italic select-text">💬 {ins.tip}</span>
+              <span className="text-green-300 italic select-text">
+                💬 {ins.tip}
+              </span>
             </div>
           ))}
         </div>
@@ -123,10 +141,16 @@ const Instructions = () => {
               ✖
             </button>
             <div className="flex items-center mb-4 select-none">
-              <h3 className="font-bold text-2xl text-white">{activeInstruction.title}</h3>
+              <h3 className="font-bold text-2xl text-white">
+                {activeInstruction.title}
+              </h3>
             </div>
-            <p className="mb-4 text-white whitespace-pre-line">{activeInstruction.content}</p>
-            <span className="text-green-300 italic">💬 {activeInstruction.tip}</span>
+            <p className="mb-4 text-white whitespace-pre-line">
+              {activeInstruction.content}
+            </p>
+            <span className="text-green-300 italic">
+              💬 {activeInstruction.tip}
+            </span>
           </div>
         </div>
       )}
