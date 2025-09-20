@@ -57,7 +57,7 @@ export const Header = () => {
             <a href="#prize" className="text-white font-mono text-lg hover:text-gray-300 transition-colors duration-300">Prize</a>
             <a href="#domain" className="text-white font-mono text-lg hover:text-gray-300 transition-colors duration-300">Domain</a>
             <a href="#instructions" className="text-white font-mono text-lg hover:text-gray-300 transition-colors duration-300">Instructions</a>
-            <a href="#sponsors" className="text-white font-mono text-lg hover:text-gray-300 transition-colors duration-300">Sponsers</a>
+            <a href="#sponsors" className="text-white font-mono text-lg hover:text-gray-300 transition-colors duration-300">Sponsors</a>
             <a href="#masterminds" className="text-white font-mono text-lg hover:text-gray-300 transition-colors duration-300">Masterminds</a>
           </div>
           <div className="md:hidden">
@@ -87,7 +87,7 @@ export const Header = () => {
             <a href="#prize" className="text-white font-mono text-lg hover:text-gray-300 transition-colors duration-300">Prize</a>
             <a href="#domain" className="text-white font-mono text-lg hover:text-gray-300 transition-colors duration-300">Domain</a>
             <a href="#instructions" className="text-white font-mono text-lg hover:text-gray-300 transition-colors duration-300">Instructions</a>
-            <a href="#sponsors" className="text-white font-mono text-lg hover:text-gray-300 transition-colors duration-300">Sponsers</a>
+            <a href="#sponsors" className="text-white font-mono text-lg hover:text-gray-300 transition-colors duration-300">Sponsors</a>
             <a href="#masterminds" className="text-white font-mono text-lg hover:text-gray-300 transition-colors duration-300">Masterminds</a>
           </div>
         )}
@@ -114,6 +114,8 @@ export const Header = () => {
             <span className="text-sm sm:text-base font-mono text-white opacity-80 mt-2">SECONDS</span>
           </div>
         </div>
+        <p className="p-10 text-2xl">Sairam Students are not allowed from now onwards</p>
+       
         <div className="w-full max-w-xs px-4">
           <RazorpayButton />
         </div>
