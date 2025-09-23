@@ -117,8 +117,8 @@ export const Header = () => {
         <p className="p-10 text-2xl">Sairam Students are not allowed from now onwards</p>
        
         <div className="w-full max-w-xs px-4">
-          <RazorpayButton />
-          {/* <p>Registration Closed For Now</p> */}
+          {/* <RazorpayButton /> */}
+          <p>Registration Closed For Now</p>
         </div>
       </main>
 
