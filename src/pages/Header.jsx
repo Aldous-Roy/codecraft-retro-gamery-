@@ -118,7 +118,7 @@ export const Header = () => {
        
         <div className="w-full max-w-xs px-4">
           {/* <RazorpayButton /> */}
-          <p>Registration Closed For Now</p>
+          <p>Registration Closed temporarily at the moment</p>
         </div>
       </main>
 
