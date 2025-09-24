@@ -116,9 +116,10 @@ export const Header = () => {
         </div>
         <p className="p-10 text-2xl">Sairam Students are not allowed from now onwards</p>
        
-        <div className="w-full max-w-xs px-4">
+        <div className="flex flex-col items-center gap-5 text-xl w-full max-w-xs px-4">
           {/* <RazorpayButton /> */}
           <p>Registration Closed temporarily at the moment</p>
+          <p>Stay tuned as we have reached Max teams!</p>
         </div>
       </main>
 
