@@ -22,9 +22,17 @@ export const Header = () => {
       const now = new Date();
       const diff = eventDate - now;
       if (diff > 0) {
-        const days = String(Math.floor(diff / (1000 * 60 * 60 * 24))).padStart(2, "0");
-        const hours = String(Math.floor((diff / (1000 * 60 * 60)) % 24)).padStart(2, "0");
-        const minutes = String(Math.floor((diff / (1000 * 60)) % 60)).padStart(2, "0");
+        const days = String(Math.floor(diff / (1000 * 60 * 60 * 24))).padStart(
+          2,
+          "0"
+        );
+        const hours = String(
+          Math.floor((diff / (1000 * 60 * 60)) % 24)
+        ).padStart(2, "0");
+        const minutes = String(Math.floor((diff / (1000 * 60)) % 60)).padStart(
+          2,
+          "0"
+        );
         const seconds = String(Math.floor((diff / 1000) % 60)).padStart(2, "0");
         setTimeLeft({ days, hours, minutes, seconds });
       } else {
@@ -37,7 +45,10 @@ export const Header = () => {
   }, []);
 
   return (
-    <div id="home" className="relative w-full h-screen bg-black overflow-hidden select-none">
+    <div
+      id="home"
+      className="relative w-full h-screen bg-black overflow-hidden select-none"
+    >
       <video
         className="absolute w-full h-full object-cover blur-xs"
         src="/0901.mp4"
@@ -53,12 +64,42 @@ export const Header = () => {
             <img src={logo} alt="CodeCraft 25" className="h-10 w-auto" />
           </div>
           <div className="hidden md:flex space-x-6">
-            <a href="#home" className="text-white font-mono text-lg hover:text-gray-300 transition-colors duration-300">Home</a>
-            <a href="#prize" className="text-white font-mono text-lg hover:text-gray-300 transition-colors duration-300">Prize</a>
-            <a href="#domain" className="text-white font-mono text-lg hover:text-gray-300 transition-colors duration-300">Domain</a>
-            <a href="#instructions" className="text-white font-mono text-lg hover:text-gray-300 transition-colors duration-300">Instructions</a>
-            <a href="#sponsors" className="text-white font-mono text-lg hover:text-gray-300 transition-colors duration-300">Sponsors</a>
-            <a href="#masterminds" className="text-white font-mono text-lg hover:text-gray-300 transition-colors duration-300">Masterminds</a>
+            <a
+              href="#home"
+              className="text-white font-mono text-lg hover:text-gray-300 transition-colors duration-300"
+            >
+              Home
+            </a>
+            <a
+              href="#prize"
+              className="text-white font-mono text-lg hover:text-gray-300 transition-colors duration-300"
+            >
+              Prize
+            </a>
+            <a
+              href="#domain"
+              className="text-white font-mono text-lg hover:text-gray-300 transition-colors duration-300"
+            >
+              Domain
+            </a>
+            <a
+              href="#instructions"
+              className="text-white font-mono text-lg hover:text-gray-300 transition-colors duration-300"
+            >
+              Instructions
+            </a>
+            <a
+              href="#sponsors"
+              className="text-white font-mono text-lg hover:text-gray-300 transition-colors duration-300"
+            >
+              Sponsors
+            </a>
+            <a
+              href="#masterminds"
+              className="text-white font-mono text-lg hover:text-gray-300 transition-colors duration-300"
+            >
+              Masterminds
+            </a>
           </div>
           <div className="md:hidden">
             <button
@@ -67,12 +108,28 @@ export const Header = () => {
               className="text-white focus:outline-none focus:ring-2 focus:ring-white"
             >
               {menuOpen ? (
-                <svg className="h-6 w-6" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" viewBox="0 0 24 24">
+                <svg
+                  className="h-6 w-6"
+                  fill="none"
+                  stroke="currentColor"
+                  strokeWidth="2"
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                  viewBox="0 0 24 24"
+                >
                   <line x1="18" y1="6" x2="6" y2="18" />
                   <line x1="6" y1="6" x2="18" y2="18" />
                 </svg>
               ) : (
-                <svg className="h-6 w-6" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" viewBox="0 0 24 24">
+                <svg
+                  className="h-6 w-6"
+                  fill="none"
+                  stroke="currentColor"
+                  strokeWidth="2"
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                  viewBox="0 0 24 24"
+                >
                   <line x1="3" y1="12" x2="21" y2="12" />
                   <line x1="3" y1="6" x2="21" y2="6" />
                   <line x1="3" y1="18" x2="21" y2="18" />
@@ -83,43 +140,104 @@ export const Header = () => {
         </div>
         {menuOpen && (
           <div className="md:hidden bg-black/90 border-t border-white/20 px-4 py-4 space-y-3 flex flex-col items-center">
-            <a href="#home" className="text-white font-mono text-lg hover:text-gray-300 transition-colors duration-300">Home</a>
-            <a href="#prize" className="text-white font-mono text-lg hover:text-gray-300 transition-colors duration-300">Prize</a>
-            <a href="#domain" className="text-white font-mono text-lg hover:text-gray-300 transition-colors duration-300">Domain</a>
-            <a href="#instructions" className="text-white font-mono text-lg hover:text-gray-300 transition-colors duration-300">Instructions</a>
-            <a href="#sponsors" className="text-white font-mono text-lg hover:text-gray-300 transition-colors duration-300">Sponsors</a>
-            <a href="#masterminds" className="text-white font-mono text-lg hover:text-gray-300 transition-colors duration-300">Masterminds</a>
+            <a
+              href="#home"
+              className="text-white font-mono text-lg hover:text-gray-300 transition-colors duration-300"
+            >
+              Home
+            </a>
+            <a
+              href="#prize"
+              className="text-white font-mono text-lg hover:text-gray-300 transition-colors duration-300"
+            >
+              Prize
+            </a>
+            <a
+              href="#domain"
+              className="text-white font-mono text-lg hover:text-gray-300 transition-colors duration-300"
+            >
+              Domain
+            </a>
+            <a
+              href="#instructions"
+              className="text-white font-mono text-lg hover:text-gray-300 transition-colors duration-300"
+            >
+              Instructions
+            </a>
+            <a
+              href="#sponsors"
+              className="text-white font-mono text-lg hover:text-gray-300 transition-colors duration-300"
+            >
+              Sponsors
+            </a>
+            <a
+              href="#masterminds"
+              className="text-white font-mono text-lg hover:text-gray-300 transition-colors duration-300"
+            >
+              Masterminds
+            </a>
           </div>
         )}
       </nav>
 
       {/* Hero Section */}
       <main className="relative z-10 flex flex-col items-center justify-center h-screen pt-16 px-4 text-center">
-        <img src={logo} alt="CodeCraft 25" className="mb-10 w-3/4 max-w-full mx-auto" />
-        <div className="flex flex-wrap justify-center gap-6 mb-12 max-w-full w-full overflow-x-auto px-2">
+        <img
+          src={logo}
+          alt="CodeCraft 25"
+          className="mb-10 w-3/4 max-w-full mx-auto"
+        />
+        {/* <div className="flex flex-wrap justify-center gap-6 mb-12 max-w-full w-full overflow-x-auto px-2">
           <div className="flex flex-col items-center border border-white rounded-md px-5 py-3 min-w-[80px] flex-shrink-0">
-            <span className="text-5xl sm:text-6xl font-mono text-white tracking-widest animate-opacityPulseSoft drop-shadow-[0_0_2px_#ffffff]">{timeLeft.days}</span>
-            <span className="text-sm sm:text-base font-mono text-white opacity-80 mt-2">DAYS</span>
+            <span className="text-5xl sm:text-6xl font-mono text-white tracking-widest animate-opacityPulseSoft drop-shadow-[0_0_2px_#ffffff]">
+              {timeLeft.days}
+            </span>
+            <span className="text-sm sm:text-base font-mono text-white opacity-80 mt-2">
+              DAYS
+            </span>
           </div>
           <div className="flex flex-col items-center border border-white rounded-md px-5 py-3 min-w-[80px] flex-shrink-0">
-            <span className="text-5xl sm:text-6xl font-mono text-white tracking-widest animate-opacityPulseSoft drop-shadow-[0_0_2px_#ffffff]">{timeLeft.hours}</span>
-            <span className="text-sm sm:text-base font-mono text-white opacity-80 mt-2">HOURS</span>
+            <span className="text-5xl sm:text-6xl font-mono text-white tracking-widest animate-opacityPulseSoft drop-shadow-[0_0_2px_#ffffff]">
+              {timeLeft.hours}
+            </span>
+            <span className="text-sm sm:text-base font-mono text-white opacity-80 mt-2">
+              HOURS
+            </span>
           </div>
           <div className="flex flex-col items-center border border-white rounded-md px-5 py-3 min-w-[80px] flex-shrink-0">
-            <span className="text-5xl sm:text-6xl font-mono text-white tracking-widest animate-opacityPulseSoft drop-shadow-[0_0_2px_#ffffff]">{timeLeft.minutes}</span>
-            <span className="text-sm sm:text-base font-mono text-white opacity-80 mt-2">MINUTES</span>
+            <span className="text-5xl sm:text-6xl font-mono text-white tracking-widest animate-opacityPulseSoft drop-shadow-[0_0_2px_#ffffff]">
+              {timeLeft.minutes}
+            </span>
+            <span className="text-sm sm:text-base font-mono text-white opacity-80 mt-2">
+              MINUTES
+            </span>
           </div>
           <div className="flex flex-col items-center border border-white rounded-md px-5 py-3 min-w-[80px] flex-shrink-0">
-            <span className="text-5xl sm:text-6xl font-mono text-white tracking-widest animate-opacityPulseSoft drop-shadow-[0_0_2px_#ffffff]">{timeLeft.seconds}</span>
-            <span className="text-sm sm:text-base font-mono text-white opacity-80 mt-2">SECONDS</span>
+            <span className="text-5xl sm:text-6xl font-mono text-white tracking-widest animate-opacityPulseSoft drop-shadow-[0_0_2px_#ffffff]">
+              {timeLeft.seconds}
+            </span>
+            <span className="text-sm sm:text-base font-mono text-white opacity-80 mt-2">
+              SECONDS
+            </span>
           </div>
-        </div>
-        <p className="p-10 text-2xl">Sairam Students are not allowed from now onwards</p>
-       
+        </div> */}
+        {/* <p className="p-10 text-2xl">
+          Sairam Students are not allowed from now onwards
+        </p> */}
+
         <div className="flex flex-col items-center gap-5 text-xl w-full max-w-xs px-4">
           {/* <RazorpayButton /> */}
-          <p>Registration Closed temporarily at the moment</p>
-          <p>Stay tuned as we have reached Max teams!</p>
+          <p className="text-center text-base sm:text-lg leading-relaxed">
+            We’ve reached the maximum number of teams. Thank you for your enthusiasm!
+          </p>
+          <a
+            href="https://www.innovatia25.tech"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="mt-4 text-blue-400 underline hover:text-blue-300 transition-colors duration-300 block text-center"
+          >
+            Check out our other events here!
+          </a>
         </div>
       </main>
 
