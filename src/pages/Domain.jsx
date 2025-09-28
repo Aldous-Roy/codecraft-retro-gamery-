@@ -131,7 +131,7 @@ const Domain = () => {
     <div
       id="domain"
       ref={instructionsRef}
-      className="relative z-0 flex justify-center items-center min-h-screen font-mono"
+      className="relative z-0 flex justify-center items-center min-h-screen font-mono pt-[10px]"
     >
 
       <div className="pointer-events-none absolute inset-0 bg-[repeating-linear-gradient(0deg,#00ff0044,#00ff0044_1px,transparent_1px,transparent_6px)] mix-blend-overlay z-0 opacity-20" />

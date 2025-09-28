@@ -4,7 +4,7 @@ const Prize = () => {
   return (
     <div
       id="prize"
-      className="bg-black text-green-400 font-mono min-h-screen p-8 flex flex-col items-center gap-6 box-border"
+      className="bg-black text-green-400 font-mono min-h-screen p-8 flex flex-col items-center gap-6 box-border pt-[120px]"
     >
       <h1 className="text-4xl mb-4 text-center text-green-500 drop-shadow-[0_0_10px_#00ff00] ">
         Prize Pool: ₹10,000+

@@ -16,7 +16,7 @@ const Masterminds = () => {
     { name: "Diviya Darshini V", phone: "86101-59124", image: "dd.jpeg" },
   ];
   return (
-    <div id="masterminds" className="min-h-screen w-full flex flex-col items-center my-20 ">
+    <div id="masterminds" className="min-h-screen w-full flex flex-col items-center my-20 pt-[80px]">
       <section className="w-full max-w-4xl">
         <h2 className="text-center mb-6 text-4xl">Faculty Coordinators</h2>
         <div className="flex flex-wrap justify-center gap-14">
