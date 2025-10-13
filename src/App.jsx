@@ -25,9 +25,9 @@ function App() {
     return () => clearTimeout(timer);
   }, []);
 
-  if (loading) {
-    return <InitialLoading />;
-  }
+  // if (loading) {
+  //   return <InitialLoading />;
+  // }
 
   return (
     <>

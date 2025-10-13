@@ -17,7 +17,7 @@ export const Header = () => {
   const [menuOpen, setMenuOpen] = useState(false);
 
   useEffect(() => {
-    const eventDate = new Date("2025-10-13T00:00:00");
+    const eventDate = new Date("2025-10-14T11:30:00");
     const updateCountdown = () => {
       const now = new Date();
       const diff = eventDate - now;
@@ -187,7 +187,7 @@ export const Header = () => {
           alt="CodeCraft 25"
           className="mb-10 w-3/4 max-w-full mx-auto"
         />
-        {/* <div className="flex flex-wrap justify-center gap-6 mb-12 max-w-full w-full overflow-x-auto px-2">
+        <div className="flex flex-wrap justify-center gap-6 mb-12 max-w-full w-full overflow-x-auto px-2">
           <div className="flex flex-col items-center border border-white rounded-md px-5 py-3 min-w-[80px] flex-shrink-0">
             <span className="text-5xl sm:text-6xl font-mono text-white tracking-widest animate-opacityPulseSoft drop-shadow-[0_0_2px_#ffffff]">
               {timeLeft.days}
@@ -220,7 +220,7 @@ export const Header = () => {
               SECONDS
             </span>
           </div>
-        </div> */}
+        </div>
         {/* <p className="p-10 text-2xl">
           Sairam Students are not allowed from now onwards
         </p> */}
