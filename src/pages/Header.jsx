@@ -17,7 +17,7 @@ export const Header = () => {
   const [menuOpen, setMenuOpen] = useState(false);
 
   useEffect(() => {
-    const eventDate = new Date("2025-10-14T11:30:00");
+    const eventDate = new Date("2025-10-14T11:45:00");
     const updateCountdown = () => {
       const now = new Date();
       const diff = eventDate - now;
@@ -225,9 +225,9 @@ export const Header = () => {
           Sairam Students are not allowed from now onwards
         </p> */}
 
-        <div className="flex flex-col items-center gap-5 text-xl w-full max-w-xs px-4">
+        {/* <div className="flex flex-col items-center gap-5 text-xl w-full max-w-xs px-4"> */}
           {/* <RazorpayButton /> */}
-          <p className="text-center text-base sm:text-lg leading-relaxed">
+          {/* <p className="text-center text-base sm:text-lg leading-relaxed">
             We’ve reached the maximum number of teams. Thank you for your enthusiasm!
           </p>
           <a
@@ -238,7 +238,7 @@ export const Header = () => {
           >
             Check out our other events here!
           </a>
-        </div>
+        </div> */}
       </main>
 
       {/* Subtle opacity pulse animation for countdown numbers */}
